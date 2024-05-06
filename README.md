@@ -66,3 +66,44 @@ for either version of the scoring function:
 - include **in-depth analysis** into results, noting 1. interesting findings, 2. limitations discussion, 3. summarised key conclusions
 - determine if there is any **correlation** between the score and the median income of each region
 - ensure at least one useful **index** (ideally spatial) has been used for your calculation
+
+## TASKS BROKEN DOWN
+
+as per the assignment [faqs](https://edstem.org/au/courses/14533/discussion/1950035):
+
+### task 1
+
+#### dataset ingestion
+- achieved through combination of `jupyter notebook` and localhost database server, demonstrated in week 8 tutorial. 
+- as per [#671](https://edstem.org/au/courses/14533/discussion/1931931) we clean the data using python first and then import into the postgresql database.
+- as per [#744](https://edstem.org/au/courses/14533/discussion/1942944) we load data into the jupyter notebook after cleaning, and then use `create table` using SQL, and then using the `to_sql` function to input data into the database
+
+#### data cleaning
+- only completely remove data points if necessary. e.g., if a row has a null value, we shouldn't completely leave it out.
+- we are welcome to filter down the abs digi boundaries to only the greater sydeny region
+
+#### data semantics
+- some datasets may require additional transformation, like overlap in school catchments. we will see what this means
+- this part basically meant the data is up to date and we should look at the source websites for descriptions if we want
+
+#### geospatial data
+- consult week 8 tutorial to see how to handle common spatial errors such as handling polygons or latitude/longitutde coordinates.
+- best practice is to use the public schema for PostGIS oeprations. this is just the default schema in the postgres database.
+
+#### naming conventions
+- some columns need renaming (e.g. one of the table names is `primary` which is a reserved keyword in SQL)
+- may need to consider case sensitivity and ensure only lowercase is used for column and table names when ingesting data [#625](https://edstem.org/au/courses/14533/discussion/1924072)
+
+### task 2
+
+#### calculation logistics
+- full marks requires calculation within SQL, z-scores and sigmoid functions included
+- regions can be excluded if they have a population of less than 100
+
+#### calculation logic
+- there is intentional rationale for calculation components such as z-scores [#602](https://edstem.org/au/courses/14533/discussion/1920392)
+- a couple of ed posts which talk about nuanced stuff, including 'per 1000 people' [#560](https://edstem.org/au/courses/14533/discussion/threads/560) and [#793](https://edstem.org/au/courses/14533/discussion/threads/793)
+- we must consider the best strategies for outliers, as the wisest approach will differ case-by-case [#606](https://edstem.org/au/courses/14533/discussion/threads/606)
+
+### task 3
+most of the information here was negligible.
