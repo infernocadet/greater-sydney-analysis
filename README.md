@@ -43,9 +43,7 @@ the sources we have on canvas are:
 ### task 2
 we need to compute a score for how "bustling" each neighbourhood is, according to the following formula:
 
-$$
-\text{score} = S(z_{\text{business}} + z_{\text{stops}} + z_{\text{polls}} + z_{\text{schools}})
-$$
+$$\text{score} = S(z_{\text{business}} + z_{\text{stops}} + z_{\text{polls}} + z_{\text{schools}})$$
 
 | **metric** | **definition** | **file** | **data source** |
 |---|---|---|---|
