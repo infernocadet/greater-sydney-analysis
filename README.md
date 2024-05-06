@@ -54,7 +54,7 @@ $$\text{score} = S(z_{\text{business}} + z_{\text{stops}} + z_{\text{polls}} + z
 
 here, $S$ is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function), $z$ is the normalised [z-score](https://en.wikipedia.org/wiki/Standard_score), and 'young people' is defined as anyone aged 0-19 years old. we only need to calculate scores for SA2 regions with a population of at least 100, and we can extend the scoring function however we deem necessary, if a rational explanation is provided. (e.g. other mathematical standardisation techniques, mitigating the impact of outliers, calculating some metrics per-capita or per-sqkm etc)
 
-we are being encouraged to extend the scoring function, for example the $z_{\text{business}$ definition is intentionally broad. we need to select a cross-section of specific industries within the provided dataset (e.g. "retail trade") that we believe will be the best refelction of how "bustling" the area is. we need to describe this rationale in ther report.
+we are being encouraged to extend the scoring function, for example the $z_{\text{business}}$ definition is intentionally broad. we need to select a cross-section of specific industries within the provided dataset (e.g. "retail trade") that we believe will be the best refelction of how "bustling" the area is. we need to describe this rationale in ther report.
 
 ### Task 3
 then we need to extend the score, by sourcing one additional dataset for each group member, and then incorporating these datasets into our scoring function. at least **one dataset should be of spatial data**, and at least one should be of a **type not used far** in this assignment ***(e.g. JSON, XML, or collated via web scraping)***.
