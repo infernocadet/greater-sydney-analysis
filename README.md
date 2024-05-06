@@ -44,5 +44,16 @@ the sources we have on canvas are:
 we need to compute a score for how "bustling" each neighbourhood is, according to the following formula:
 
 $$
-\text{doin}
+\text{score} = S(z_{\text{business}} + z_{\text{stops}} + z_{\text{polls}} + z_{\text{schools}})
 $$
+
+| **metric** | **definition** | **file** | **data source** |
+|---|---|---|---|
+| business | selected industry businesses per 1000 people | `Businesses.csv` | [ABS](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release#data-downloads_) |
+| stops | number of public transport stops | `Stops.txt` | [transport for nsw](https://opendata.transport.nsw.gov.au/dataset/timetables-complete-gtfs) |
+| polls | federal election polling locations (as of 2019) | `PollingPlaces2019.csv` | [australian electoral commission](https://data.aurin.org.au/dataset/au-govt-aec-aec-federal-election-polling-places-2019-na) |
+| schools | school catchments areas per 1000 **young people** | `SchoolCatchments.zip` | [nsw dept of education](https://data.cese.nsw.gov.au/data/dataset/school-intake-zones-catchment-areas-for-nsw-government-schools) |
+
+here, $S$ is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function), $z$ is the normalised [z-score](https://en.wikipedia.org/wiki/Standard_score), and 'young people' is defined as anyone aged 0-19 years old. we only need to calculate scores for SA2 regions with a population of at least 100, and we can extend the scoring function however we deem necessary, if a rational explanation is provided. (e.g. other mathematical standardisation techniques, mitigating the impact of outliers, calculating some metrics per-capita or per-sqkm etc)
+
+we are being encouraged to extend the scoring function, for example the $z_{\text{business}$ definition is intentionally broad. we need to select a cross-section of specific industries within the provided dataset (e.g. "retail trade") that we believe will be the best refelction of how "bustling" the area is. we need to describe this rationale in ther report.
