@@ -57,3 +57,14 @@ $$
 here, $S$ is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function), $z$ is the normalised [z-score](https://en.wikipedia.org/wiki/Standard_score), and 'young people' is defined as anyone aged 0-19 years old. we only need to calculate scores for SA2 regions with a population of at least 100, and we can extend the scoring function however we deem necessary, if a rational explanation is provided. (e.g. other mathematical standardisation techniques, mitigating the impact of outliers, calculating some metrics per-capita or per-sqkm etc)
 
 we are being encouraged to extend the scoring function, for example the $z_{\text{business}$ definition is intentionally broad. we need to select a cross-section of specific industries within the provided dataset (e.g. "retail trade") that we believe will be the best refelction of how "bustling" the area is. we need to describe this rationale in ther report.
+
+### Task 3
+then we need to extend the score, by sourcing one additional dataset for each group member, and then incorporating these datasets into our scoring function. at least **one dataset should be of spatial data**, and at least one should be of a **type not used far** in this assignment ***(e.g. JSON, XML, or collated via web scraping)***.
+
+any subject matter is permissible, but it just has to be reelvant to the calculation of the "bustling" metric (e.g. public facilities, other census statistics, local wildlife)
+
+for either version of the scoring function:
+- visualise your score in an engaging way and summarise key results in a table (including a useful map-overlau visualisation or an interactive graph)
+- include **in-depth analysis** into results, noting 1. interesting findings, 2. limitations discussion, 3. summarised key conclusions
+- determine if there is any **correlation** between the score and the median income of each region
+- ensure at least one useful **index** (ideally spatial) has been used for your calculation
