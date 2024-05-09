@@ -1,0 +1,5 @@
+{"host": "localhost",
+ "port": 5433,
+ "database": "DATA2001",
+ "user": "postgres",
+ "password": "***REMOVED***"}
