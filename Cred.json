@@ -2,6 +2,6 @@
  "port": 5433,
  "database": "DATA2001",
  "user": "postgres",
- "password": "***REMOVED***",
- "api_key": "***REMOVED***",
- "auth_key": "***REMOVED***"}
+ "password": "**REMOVED**",
+ "api_key": "**REMOVED**",
+ "auth_key": "**REMOVED**"}
